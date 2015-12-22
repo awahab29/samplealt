@@ -1,0 +1,24 @@
+div.one {
+    border-style: double;
+    border-width: 5px;
+}
+
+div.two {
+    border-style: groove;
+    border-width: medium;
+}
+
+div.three {
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+}
+
+div.four {
+    border-style: dotted;
+    border-width: medium;
+}
+
+div.five {
+    border-style: double;
+    border-width: medium;
+}
