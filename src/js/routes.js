@@ -8,6 +8,7 @@ var About = require('./components/About');
 var Simple = require('./components/Simple');
 var Locations = require('./components/Locations');
 var LocationDetail = require('./components/LocationDetail');
+var Todos = require('./components/Todos');
 var CheckboxWithLabel = require('./components/CheckboxWithLabel');
 
 var routes = (
@@ -17,6 +18,7 @@ var routes = (
         <Route name="simple" path="/simple" handler={Simple} />
         <Route name="locations" path="/locations" handler={Locations} />
         <Route name="test" path="/test" handler={CheckboxWithLabel} />
+        <Route name="todos" path="/todos" handler={Todos} />
         <Route name="locationDetail" path="/location/:locationId" handler={LocationDetail} /> 
     </Route>
 );
