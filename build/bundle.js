@@ -36050,10 +36050,13 @@ var LocationActions = (function () {
 module.exports = alt.createActions(LocationActions);
 
 },{"../alt":248,"../sources/LocationSource":260}],247:[function(require,module,exports){
+'use strict';
+
 var alt = require('../alt');
-const TodoActions = alt.generateActions('addTodo', 'clearTodo');
+var TodoActions = alt.generateActions('addTodo', 'clearTodo');
 
 module.exports = TodoActions;
+
 },{"../alt":248}],248:[function(require,module,exports){
 'use strict';
 
@@ -36561,12 +36564,12 @@ var TodoComponent = React.createClass({
       React.createElement('input', { type: 'text', id: 'todoText' }),
       React.createElement(
         'button',
-        { onClick: this.addTodo },
+        { style: { marginLeft: '5px' }, onClick: this.addTodo },
         'Add Todo'
       ),
       React.createElement(
         'button',
-        { onClick: this.clearTodo },
+        { style: { marginLeft: '5px' }, onClick: this.clearTodo },
         'Clear Todos'
       ),
       React.createElement(
@@ -36590,7 +36593,7 @@ var Todos = React.createClass({
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'four' },
+      { className: 'six' },
       React.createElement(
         'h2',
         null,
