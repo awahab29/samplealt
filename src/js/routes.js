@@ -13,12 +13,13 @@ var CheckboxWithLabel = require('./components/CheckboxWithLabel');
 
 var routes = (
     <Route name="home" path='/' handler={App}>
-        <DefaultRoute name="default" handler={Default} />
+        <DefaultRoute name="default" handler={Todos} />
         <Route name="about" path="/about" handler={About} />
         <Route name="simple" path="/simple" handler={Simple} />
         <Route name="locations" path="/locations" handler={Locations} />
         <Route name="test" path="/test" handler={CheckboxWithLabel} />
         <Route name="todos" path="/todos" handler={Todos} />
+        <Route name="counter" path="/counter" handler={Default} />
         <Route name="locationDetail" path="/location/:locationId" handler={LocationDetail} /> 
     </Route>
 );

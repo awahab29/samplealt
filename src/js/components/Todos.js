@@ -2,49 +2,9 @@ var React = require('react');
 var AltContainer = require('alt/AltContainer');
 var TodoStore = require('../stores/TodoStore');
 var TodoActions = require('../actions/TodoActions');
+var $ = require('jquery');  
 
-var TodoComponent = React.createClass({
-  addTodo() {
-      TodoActions.addTodo();
-  },
-
-  clearTodo() {
-      TodoActions.clearTodo();
-  },
-
-  render() {
-    if (this.props.errorMessage) {
-      return (
-        <div>{this.props.errorMessage}</div>
-      );
-    }
-
-    return (
-      <div>
-      <input type="text" id="todoText"  />
-      <button style={{marginLeft: '5px'}} onClick={this.addTodo} >
-              Add Todo
-      </button>
-      <button style={{marginLeft: '5px'}} onClick={this.clearTodo} >
-              Clear Todos
-      </button>
-      <ul>
-        {this.props.todos.map((todo, i) => {
-
-          return (
-            <li key={i}>
-              {todo}
-            </li>
-          );
-        })}
-      </ul>
-      </div>
-    );
-  }
-});
-
-
-var Todos = React.createClass({
+var Todos = React.createClass({ // creating a parent component that defines and alt container component
 
   render() {
     return (
@@ -60,4 +20,44 @@ var Todos = React.createClass({
   }
 });
 
-module.exports = Todos;
+module.exports = Todos; //export the component
+
+var TodoComponent = React.createClass({
+  addTodo() {
+      var todo = $('#todoText').val();
+      TodoActions.addTodo(todo);
+
+      $('#todoText').val('');
+  },
+  clearTodo() {
+      $('#todoText').val('');
+      TodoActions.clearTodo();
+  },
+  render() {
+    if (this.props.errorMessage) {
+      return (
+        <div>{this.props.errorMessage}</div>
+      );
+    }
+    return (
+      <div>
+      <input type="text" id="todoText"  />
+      <button style={{marginLeft: '5px'}} onClick={this.addTodo} >
+              Add Todo
+      </button>
+      <button style={{marginLeft: '5px'}} onClick={this.clearTodo} >
+              Clear Todos
+      </button>
+      <ul>
+        {this.props.todos.map((todo, i) => {
+          return (
+            <li key={i}>
+              {todo}
+            </li>
+          );
+        })}
+      </ul>
+      </div>
+    );
+  }
+});
