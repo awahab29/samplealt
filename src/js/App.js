@@ -18,6 +18,7 @@ var App = React.createClass({
                     <Link to='locations'><li className="navigation-item">Locations</li></Link>
                     <Link to='test'><li className="navigation-item">Jest Testing Component</li></Link>
                     <Link to='simple'><li className="navigation-item">Simple Component</li></Link>
+                    <Link to='todos'><li className="navigation-item">Todos</li></Link>
                 </ul>
                 <RouteHandler {...this.props} />
             </div>

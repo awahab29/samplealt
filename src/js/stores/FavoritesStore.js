@@ -13,6 +13,11 @@ class FavoritesStore {
   addFavoriteLocation(location) {
     this.locations.push(location); 
   }
+
+  onRemoveFavoriteLocation(){
+		
+  }
+
 }
 
 module.exports = alt.createStore(FavoritesStore, 'FavoritesStore');
