@@ -27,3 +27,9 @@ div.five {
     border-width: medium;
     padding-left: 20px;
 }
+
+div.six {
+    border-style: dashed;
+    border-width: medium;
+    padding-left: 20px;
+}
