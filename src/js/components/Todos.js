@@ -34,11 +34,7 @@ var TodoComponent = React.createClass({
       TodoActions.clearTodo();
   },
   render() {
-    if (this.props.errorMessage) {
-      return (
-        <div>{this.props.errorMessage}</div>
-      );
-    }
+
     return (
       <div>
       <input type="text" id="todoText"  />
