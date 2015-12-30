@@ -15,14 +15,14 @@ var Locations = React.createClass({
   render() {
     return (
       <div className='two'>
-        <h2>Locations Page</h2>
+        <h4>Locations Page</h4>
         
-        <h3>Mark favorite from following available locations</h3>
+        <h5>Mark favorite from following available locations</h5>
         <AltContainer store={LocationStore}>
           <AllLocations />
         </AltContainer>
 
-        <h3>Favorite List</h3>
+        <h5>Favorite List</h5>
         <AltContainer store={FavoritesStore}>
           <Favorites />
         </AltContainer>

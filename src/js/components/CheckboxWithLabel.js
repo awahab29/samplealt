@@ -19,7 +19,7 @@ class CheckboxWithLabel extends React.Component {
   render() {
     return (
       <div className='one'>
-      <h2>A checkbox component to test with Jest</h2>
+      <h4>A checkbox component to test with Jest</h4>
         <label>
           <input
             type="checkbox"

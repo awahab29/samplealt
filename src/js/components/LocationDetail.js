@@ -17,11 +17,11 @@ var FetchedDetail = React.createClass({
 
         return (
             <div className="five">  
-                <h2>Detail page for the location key: <b>{this.props.locationId}</b></h2>
-                <h3>Data Id got from server:  <b>{this.props.location.id}</b></h3>
-                <h3>Data Name got from server:  <b>{this.props.location.name}</b></h3>
+                <h4>Detail page for the location key: <b>{this.props.locationId}</b></h4>
+                <h5>Data Id got from server:  <b>{this.props.location.id}</b></h5>
+                <h5>Data Name got from server:  <b>{this.props.location.name}</b></h5>
 
-                <h3>Last selected location taken from cookie:  <b>{lastSelectedLoc.name}</b></h3>
+                <h5>Last selected location taken from cookie:  <b>{lastSelectedLoc.name}</b></h5>
             </div>
         );
     }

@@ -22,18 +22,18 @@ var AllLocations = React.createClass({
     }
 
     return (
-      <ul>
+      <ul className="collection">
         {this.props.locations.map((location, i) => {
           var faveButton = (
-            <button onClick={this.addFave} data-id={location.id}>
+            <button onClick={this.addFave} data-id={location.id} className="waves-effect waves-light btn">
               Favorite
             </button>
           );
           var heart = (<img src='./src/img/heart.png' />);
 
           return (
-            <li key={i}>
-              {location.name} {location.has_favorite ? heart : faveButton}
+            <li key={i} className="collection-item">
+              <p>{location.name}  {location.has_favorite ? heart : faveButton}</p>
             </li>
           );
         })}

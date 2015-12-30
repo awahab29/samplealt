@@ -9,7 +9,7 @@ var Todos = React.createClass({ // creating a parent component that defines and 
   render() {
     return (
       <div className='six'>
-        <h2>Todos Page</h2>
+        <h4>Todos Page</h4>
         
         <AltContainer store={TodoStore}>
           <TodoComponent />
@@ -38,10 +38,10 @@ var TodoComponent = React.createClass({
     return (
       <div>
       <input type="text" id="todoText"  />
-      <button style={{marginLeft: '5px'}} onClick={this.addTodo} >
+      <button style={{marginLeft: '5px'}} onClick={this.addTodo}  className="waves-effect waves-light btn">
               Add Todo
       </button>
-      <button style={{marginLeft: '5px'}} onClick={this.clearTodo} >
+      <button style={{marginLeft: '5px'}} onClick={this.clearTodo}  className="waves-effect waves-light btn" >
               Clear Todos
       </button>
       <ul>

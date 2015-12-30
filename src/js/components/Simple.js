@@ -8,6 +8,7 @@ class Simple extends React.Component {
     var mockData = [];
         for (var i=1;i<=10;i++){
               mockData.push({id:i,name:'London '+i, fav:false});
+              var a = i;
         }
 
     this.state = {data: mockData};
@@ -44,14 +45,14 @@ class Simple extends React.Component {
   render() {
     return (
       <div className='four'>
-      <h2>Simple component without Flux</h2>
-      <button onClick={this.addData} data-id={location.id}>
+      <h4>Simple component without Flux</h4>
+      <button onClick={this.addData} data-id={location.id} className="waves-effect waves-light btn">
               Add
             </button>
-      <ul>
+      <ul className="collection">
         {this.state.data.map((location, i) => {
           var faveButton = (
-            <button onClick={this.addFave} data-id={location.id}>
+            <button onClick={this.addFave} data-id={location.id} className="waves-effect waves-light btn">
               Favorite
             </button>
           );
@@ -59,7 +60,7 @@ class Simple extends React.Component {
           var heart = (<img src='./src/img/heart.png' />);
 
           return (
-            <li key={i}>
+            <li key={i} className="collection-item">
               {location.name} {location.fav ? heart : faveButton}
             </li>
           );

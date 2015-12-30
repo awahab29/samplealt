@@ -17,8 +17,8 @@ var Default = module.exports = React.createClass({
   render: function() {
     return (
       <div className='three'>
-      <h2>Counter Page</h2>
-      <h3 onClick={this.onClick}>Counter using local storage: {this.state.counter}</h3>
+      <h4>Counter Page</h4>
+      <h5 onClick={this.onClick}>Counter using local storage: {this.state.counter}</h5>
       </div>
     );
   }
