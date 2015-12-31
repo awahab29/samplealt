@@ -2,48 +2,20 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script>
-      var myApp = angular.module('myApp',[]);
 
-      myApp.controller('GreetingController', ['$scope', function($scope) {
-          
-        mockData = [];
-        for (var i=1;i<=1000;i++){
-              mockData.push({id:i,name:'London '+i, fav:false});
-        }
+    <script src="src/js/AngularAlt.js"></script>
+    <script src="src/js/actions/AngularActions.js"></script>
+    <script src="src/js/stores/AngularStore.js"></script>
+    <script src="src/js/AngularApp.js"></script>
 
-        $scope.data = mockData;
-
-        $scope.makeFav = function(id){
-          var start = new Date().getTime();
-
-          for (var i = 1; i <= $scope.data.length; i += 1) {
-
-            // set has_favorite to true
-            if ($scope.data[i].id === id) {
-              $scope.data[i].fav = true;
-              break;
-            }
-          }
-          var end = new Date().getTime();
-          console.info(end-start);
-        }
-
-        $scope.add = function(){
-          $scope.data.push({id:Math.random(),name:'Another ', fav:false});
-        }
-
-      }]);
-
-    </script>
   </head>
   <body ng-app="myApp">
-
     <div ng-controller="GreetingController">
-       <button ng-click="add();">Add</button>
+      <h3>{{title}}</h3>
+       <button data-ng-click="addItem()">Add Fruit</button>
       <ul>
-         <li ng-repeat="d in data">
-            {{d.name}} <span ng-show="d.fav"> <3 </span> <button ng-click="makeFav(d.id);" ng-hide="d.fav">Favorite</button> 
+         <li ng-repeat="d in data.foods">
+            {{d.name}} 
          </li> 
       </ul>
     </div>
