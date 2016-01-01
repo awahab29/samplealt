@@ -1,10 +1,10 @@
-jest.dontMock('../src/js/components/newTodo');
+jest.dontMock('../src/js/components/Todo');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
-var Todo = require('../src/js/components/newTodo');
+var Todo = require('../src/js/components/Todo');
 
 
 describe('CheckboxWithLabel', () => {
