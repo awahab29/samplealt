@@ -12,13 +12,14 @@ var App = React.createClass({
     render: function() {
         return (
             <div>
-                <ul className="collection with-header">
+                <ul className="collection with-header row">
                     <li className="collection-item"><h5>Menu of route pages</h5></li>
-                    <Link to='todos'><li className="collection-item">Todos</li></Link>
-                    <Link to='counter'><li className="collection-item">Counter</li></Link>
-                    <Link to='locations'><li className="collection-item">Locations</li></Link>
-                    <Link to='test'><li className="collection-item">Jest Testing Component</li></Link>
-                    <Link to='simple'><li className="collection-item">Simple Component</li></Link>
+                    <Link to='todos'><li className="collection-item col s1">Todos</li></Link>
+                    <Link to='counter'><li className="collection-item col s1">Counter</li></Link>
+                    <Link to='locations'><li className="collection-item col s1">Locations</li></Link>
+                    <Link to='test'><li className="collection-item col s1">Jest Testing Component</li></Link>
+                    <Link to='simple'><li className="collection-item col s1">Simple Component</li></Link>
+                    <Link to='components'><li className="collection-item col s1">Components Page</li></Link>
                 </ul>
                 <RouteHandler {...this.props} />
             </div>
